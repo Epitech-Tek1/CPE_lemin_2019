@@ -24,7 +24,7 @@ typedef struct anthill_s
     anth_t *anth;
     size_t nanth;
     int ac;
-    char **anthill; // room ni en dessous de start ou de end
+    char **anthill;
     char **startend_room;
     char **av;
 } anthill_t;
@@ -32,7 +32,7 @@ typedef struct anthill_s
 typedef struct lemin_s
 {
     anthill_t anthill;
-    anthill_t tunnel;
+    tunnel_t tunnel;
     char *content;
     char **file_tab;
 } lemin_t;
