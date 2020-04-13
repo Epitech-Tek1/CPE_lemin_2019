@@ -8,7 +8,7 @@
 #include "../lib/my/my.h"
 #include "../include/lemin.h"
 
-static void *get_file(lem_in_t *lemin)
+static void get_file(lem_in_t *lemin)
 {
     int i;
 
@@ -20,7 +20,8 @@ static int check_content(lem_in_t *lemin)
 {
     if (lemin->content[0] == '\0')
         return (ERROR_EXIT);
-
+    if (check_buffer(lemin) == FALSE)
+        return (ERROR_EXIT);
     return (NORMAL_EXIT);
 }
 

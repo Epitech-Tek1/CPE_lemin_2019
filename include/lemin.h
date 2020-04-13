@@ -11,6 +11,11 @@
 #define ERROR_EXIT 84
 #define NORMAL_EXIT 0
 
+typedef enum {
+  FALSE = 0,
+  TRUE = 1
+} Bool;
+
 typedef struct lem_in_s
 {
     char *content;
@@ -18,5 +23,6 @@ typedef struct lem_in_s
 
 int parse_file(lem_in_t *lemin);
 int start_engine(lem_in_t *lemin);
+int check_buffer(lem_in_t *lemin);
 
 #endif /* LEMIN_H */

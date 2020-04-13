@@ -8,7 +8,8 @@
 FSRC	:=	src/
 
 SRC	:=	$(FSRC)main.c	\
-		$(FSRC)parse_file.c	\
+		$(FSRC)parse_file_0.c	\
+		$(FSRC)parse_file_1.c	\
 		$(FSRC)start_engine.c	\
 
 NAME	:=	lem_in
