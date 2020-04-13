@@ -15,7 +15,12 @@ static void init_struct(lemin_t *lemin)
 
 static void free_struct(lemin_t *lemin)
 {
+    int tab_len = my_tablen(lemin->file_tab);
+
     free(lemin->content);
+    for (int i = tab_len; i != 0; --i)
+        free(lemin->file_tab[i]);
+    free(lemin->file_tab);
     free(lemin);
 }
 
