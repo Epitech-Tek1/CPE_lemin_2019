@@ -58,7 +58,6 @@ int get_tunnel(lemin_t *lemin)
             i++;
         if (many_space(lemin->file_tab[i]) == 0) {
             lemin->tunnel.near_room[j] = lemin->file_tab[i];
-            printf("%s\n", lemin->tunnel.near_room[j]);
             j++;
         }
     }
