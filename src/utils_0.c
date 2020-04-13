@@ -11,18 +11,11 @@ void clear_string(lemin_t *lemin)
 {
     for (int i = 0; lemin->file_tab[i] != NULL; i++) {
         for (int j = 0; lemin->file_tab[i][j] != '\0'; j++) {
-            if (lemin->file_tab[i][0] == '#') {
-                i++;
-                break;
-            }
-            my_printf("%c\n", lemin->file_tab[i][j]);
-            if (lemin->file_tab[i][j] == "#") {
-                my_printf("result here = %s\n", lemin->file_tab[i]);
+            if (lemin->file_tab[i][j] == '#' && lemin->file_tab[i][0] != '#') {
                 lemin->file_tab[i][j] = '\0';
                 break;
             }
         }
-        my_printf("here is = %s\n", lemin->file_tab[i]);
     }
 }
 

@@ -9,8 +9,3 @@
 0-2
 2-3
 3-1
-
-AB = √[(xb - xa)² + (yb - ya)²]
-distance = √[(xroom1 - xroomdebut)² + (yroom1 - ydebut)²]
-
-depart->room1 = √[(1 - 0)² + (13 - 1)²]

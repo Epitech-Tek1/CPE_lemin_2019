@@ -76,5 +76,6 @@ int check_buffer(lemin_t *lemin)
         return (FALSE);
     if (check_file_error(lemin) == FALSE)
         return (FALSE);
+    get_info(lemin);
     return (TRUE);
 }
