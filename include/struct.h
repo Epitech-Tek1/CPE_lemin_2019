@@ -24,8 +24,6 @@ typedef struct anthill_s
     char **av;
 } anthill_t;
 
-typedef enum near_room_t {next = 0, past = 1};
-
 typedef struct tunnel_s
 {
     char **near_room;
