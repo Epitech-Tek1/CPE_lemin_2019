@@ -5,10 +5,9 @@
 ** lem_in
 */
 
-#include "../lib/my/my.h"
-#include "../include/lemin.h"
+#include "lemin.h"
 
-static void get_file(lem_in_t *lemin)
+static void get_file(lemin_t *lemin)
 {
     int i;
 
@@ -16,7 +15,7 @@ static void get_file(lem_in_t *lemin)
     lemin->content[i] = '\0';
 }
 
-static int check_content(lem_in_t *lemin)
+static int check_content(lemin_t *lemin)
 {
     if (lemin->content[0] == '\0')
         return (ERROR_EXIT);
@@ -25,7 +24,7 @@ static int check_content(lem_in_t *lemin)
     return (NORMAL_EXIT);
 }
 
-int parse_file(lem_in_t *lemin)
+int parse_file(lemin_t *lemin)
 {
     get_file(lemin);
     my_printf(lemin->content);

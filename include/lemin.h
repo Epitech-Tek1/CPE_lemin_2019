@@ -11,18 +11,23 @@
 #define ERROR_EXIT 84
 #define NORMAL_EXIT 0
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+#include "struct.h"
+#include "library/_maths/include/maths.h"
+#include "library/_stat/include/stat.h"
+#include "library/_string/include/string.h"
+#include "../lib/my/my.h"
+
 typedef enum {
   FALSE = 0,
   TRUE = 1
 } Bool;
 
-typedef struct lem_in_s
-{
-    char *content;
-} lem_in_t;
-
-int parse_file(lem_in_t *lemin);
-int start_engine(lem_in_t *lemin);
-int check_buffer(lem_in_t *lemin);
+int parse_file(lemin_t *lemin);
+int start_engine(lemin_t *lemin);
+int check_buffer(lemin_t *lemin);
 
 #endif /* LEMIN_H */

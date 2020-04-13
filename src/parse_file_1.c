@@ -5,10 +5,9 @@
 ** lem_in
 */
 
-#include "../lib/my/my.h"
-#include "../include/lemin.h"
+#include "lemin.h"
 
-int check_buffer(lem_in_t *lemin)
+int check_buffer(lemin_t *lemin)
 {
     char **buffer;
     return (NORMAL_EXIT);

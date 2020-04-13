@@ -23,7 +23,7 @@ _MAKEFILES	:=	my	\
 
 LIBS	:=	$(addprefix -l, $(_MAKEFILES))
 
-LDFLAGS +=	-I ./inclue/ -L./lib $(LIBS)
+LDFLAGS +=	-Iinclude/ -L./lib $(LIBS)
 
 
 CFLAGS	+=	-Wall
@@ -41,7 +41,7 @@ $(NAME):	$(OBJ)	make_all
 	@echo -e "$(CLEAR)$(NAME) : $(COLOR)OK$(WHITE)"
 
 %.o:	%.c
-	@$(CC) -g -o $@ -c $< $(CFLAGS)
+	@$(CC) -g -o $@ -c $< $(CFLAGS) $(LDFLAGS)
 	@echo -ne "$(CLEAR)Compiled $< : $(COLOR)OK$(WHITE)\r"
 
 clean:	make_clean

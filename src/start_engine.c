@@ -5,10 +5,9 @@
 ** lem_in
 */
 
-#include "../lib/my/my.h"
-#include "../include/lemin.h"
+#include "lemin.h"
 
-int start_engine(lem_in_t *lemin)
+int start_engine(lemin_t *lemin)
 {
     return (NORMAL_EXIT);
 }
