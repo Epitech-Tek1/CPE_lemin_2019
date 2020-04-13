@@ -14,21 +14,21 @@ typedef struct anth_s
     char *position;
 } anth_t;
 
+typedef struct tunnel_s
+{
+    char **near_room;
+} tunnel_t;
+
 typedef struct anthill_s
 {
     anth_t *anth;
     size_t nanth;
     int ac;
     char **anthill;
+    tunnel_t *tunnel;
     char **startend_room;
     char **av;
 } anthill_t;
-
-typedef struct tunnel_s
-{
-    char **near_room;
-} tunnel_t;
-
 
 typedef struct lemin_s
 {
