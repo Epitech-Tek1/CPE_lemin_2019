@@ -10,18 +10,18 @@
 
 static void init_struct(lem_in_t *lemin)
 {
-    lemin->buffer = malloc(sizeof(char) * 4000);
+    lemin->content = malloc(sizeof(char) * 4000);
+    lemin->content[0] = '\0';
 }
 
 static void free_struct(lem_in_t *lemin)
 {
-    free(lemin->buffer);
+    free(lemin->content);
     free(lemin);
 }
 
-static int lem_in(int gc, char **gv)
+static int lem_in(int gc, char **gv, lem_in_t *lemin)
 {
-    lem_in_t *lemin = malloc(sizeof(lem_in_t));
 
     if (lemin == NULL)
         return (ERROR_EXIT);
@@ -30,11 +30,14 @@ static int lem_in(int gc, char **gv)
         return (ERROR_EXIT);
     if (start_engine(lemin) == ERROR_EXIT)
         return (ERROR_EXIT);
-    free_struct(lemin);
     return (NORMAL_EXIT);
 }
 
 int main(int gc, char **gv)
 {
-    return (lem_in(gc, gv));
+    lem_in_t *lemin = malloc(sizeof(lem_in_t));
+
+    int output = lem_in(gc, gv, lemin);
+    free_struct(lemin);
+    return (output);
 }
