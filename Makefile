@@ -17,6 +17,9 @@ NAME	:=	lem_in
 OBJ	:=	$(SRC:.c=.o)
 
 _MAKEFILES	:=	my	\
+				_maths	\
+				_stat	\
+				_string	\
 
 LIBS	:=	$(addprefix -l, $(_MAKEFILES))
 
