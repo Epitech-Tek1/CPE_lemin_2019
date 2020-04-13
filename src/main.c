@@ -10,11 +10,12 @@
 
 static void init_struct(lem_in_t *lemin)
 {
-
+    lemin->buffer = malloc(sizeof(char) * 4000);
 }
 
 static void free_struct(lem_in_t *lemin)
 {
+    free(lemin->buffer);
     free(lemin);
 }
 

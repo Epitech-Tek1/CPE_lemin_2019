@@ -13,7 +13,7 @@
 
 typedef struct lem_in_s
 {
-
+    char *buffer;
 } lem_in_t;
 
 int parse_file(lem_in_t *lemin);
