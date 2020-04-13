@@ -27,7 +27,6 @@ static int check_content(lemin_t *lemin)
 int parse_file(lemin_t *lemin)
 {
     get_file(lemin);
-    my_printf(lemin->content);
     if (check_content(lemin) == ERROR_EXIT)
         return (ERROR_EXIT);
     return (NORMAL_EXIT);

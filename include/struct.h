@@ -36,6 +36,7 @@ typedef struct lemin_s
 {
     anthill_t anthill;
     char *content;
+    char **file_tab;
 } lemin_t;
 
 

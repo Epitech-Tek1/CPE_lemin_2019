@@ -9,8 +9,8 @@
 
 int is_alnum(char c)
 {
-    if (c == 39)
-        return (0);
+    if (c == 32)
+        return (1);
     if (c < '!' || c > 126)
         return (0);
     else return (1);

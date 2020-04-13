@@ -16,9 +16,9 @@
 #include <unistd.h>
 
 #include "struct.h"
-#include "library/_maths/include/maths.h"
-#include "library/_stat/include/stat.h"
-#include "library/_string/include/string.h"
+#include "../lib/_maths/include/maths.h"
+#include "../lib/_stat/include/stat.h"
+#include "../lib/_string/include/string.h"
 #include "../lib/my/my.h"
 
 typedef enum {
