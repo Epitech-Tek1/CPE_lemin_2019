@@ -31,7 +31,7 @@ static int lem_in(int gc, char **gv, lemin_t *lemin)
     init_struct(lemin);
     if (parse_file(lemin) == ERROR_EXIT)
         return (ERROR_EXIT);
-    if (start_engine(lemin) == ERROR_EXIT)
+    if (!process(lemin))
         return (ERROR_EXIT);
     return (NORMAL_EXIT);
 }

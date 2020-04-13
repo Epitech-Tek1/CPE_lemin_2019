@@ -14,8 +14,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdbool.h>
 
 #include "struct.h"
+#include "function.h"
 #include "../lib/_maths/include/maths.h"
 #include "../lib/_stat/include/stat.h"
 #include "../lib/_string/include/string.h"
@@ -25,9 +27,5 @@ typedef enum {
   FALSE = 0,
   TRUE = 1
 } Bool;
-
-int parse_file(lemin_t *lemin);
-int start_engine(lemin_t *lemin);
-int check_buffer(lemin_t *lemin);
 
 #endif /* LEMIN_H */
