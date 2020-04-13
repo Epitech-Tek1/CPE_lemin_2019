@@ -56,13 +56,28 @@ static int check_file_error(lemin_t *lemin)
     return (TRUE);
 }
 
+static void get_info(lemin_t *lemin)
+{
+    int begin = get_pos(lemin, "##start") + 1;
+    int end = get_pos(lemin, "##end") + 1;
+    lemin->anthill.startend_room = malloc(sizeof(char *) * 3);
+
+    lemin->anthill.nanth = my_getnbr(lemin->file_tab[0]);
+    lemin->anthill.startend_room[0] = lemin->file_tab[begin];
+    lemin->anthill.startend_room[1] = lemin->file_tab[end];
+    clear_string(lemin);
+    get_pos_file(lemin);
+    get_tunnel(lemin);
+}
+
 int check_buffer(lemin_t *lemin)
 {
     if (parse_file_to_tab(lemin) == FALSE)
         return (FALSE);
     if (check_file_error(lemin) == FALSE)
         return (FALSE);
-    for (int i = 0; lemin->file_tab[i] != NULL; i++)
-        my_printf("content = %s\n", lemin->file_tab[i]);
+    /*for (int i = 0; lemin->file_tab[i] != NULL; i++)
+        my_printf("content = %s\n", lemin->file_tab[i]);*/
+    get_info(lemin);
     return (TRUE);
 }

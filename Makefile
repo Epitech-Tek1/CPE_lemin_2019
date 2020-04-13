@@ -11,6 +11,7 @@ SRC	:=	$(FSRC)main.c	\
 		$(FSRC)parse_file_0.c	\
 		$(FSRC)parse_file_1.c	\
 		$(FSRC)process.c	\
+		$(FSRC)utils_0.c	\
 
 NAME	:=	lem_in
 

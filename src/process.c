@@ -16,5 +16,5 @@ bool process(lemin_t *lemin)
 {
     for (int i = 0; process_fct[i]; i++)
         if (!process_fct[i](lemin)) return (false);
-    return (true);
+    return (true);  
 }
