@@ -76,11 +76,5 @@ int check_buffer(lemin_t *lemin)
         return (FALSE);
     if (check_file_error(lemin) == FALSE)
         return (FALSE);
-<<<<<<< HEAD
-=======
-    /*for (int i = 0; lemin->file_tab[i] != NULL; i++)
-        my_printf("content = %s\n", lemin->file_tab[i]);*/
-    get_info(lemin);
->>>>>>> 3d89e71c68b1c6be3790df6e3f13d7a76ab36c87
     return (TRUE);
 }

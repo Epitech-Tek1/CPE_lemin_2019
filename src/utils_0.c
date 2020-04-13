@@ -15,14 +15,14 @@ void clear_string(lemin_t *lemin)
                 i++;
                 break;
             }
-            printf("%c\n", lemin->file_tab[i][j]);
+            my_printf("%c\n", lemin->file_tab[i][j]);
             if (lemin->file_tab[i][j] == "#") {
-                my_printf("result here = %s\n",lemin->file_tab[i]);
+                my_printf("result here = %s\n", lemin->file_tab[i]);
                 lemin->file_tab[i][j] = '\0';
                 break;
             }
         }
-        my_printf("here is = %s\n",lemin->file_tab[i]);
+        my_printf("here is = %s\n", lemin->file_tab[i]);
     }
 }
 
@@ -38,7 +38,6 @@ int many_space(char *str)
         if (str[i] == ' ')
             res++;
     }
-    //printf("res = %d\n", res);
     return (res);
 }
 
@@ -48,13 +47,13 @@ int get_pos_file(lemin_t *lemin)
 
     lemin->anthill.anthill = malloc(sizeof(char *) * 20);
     for (int i = 1 ; lemin->file_tab[i] != NULL; i++) {
-        if (my_strcmp(lemin->file_tab[i - 1], "##start") == 0 || my_strcmp(lemin->file_tab[i - 1], "##end") == 0)
+        if (my_strcmp(lemin->file_tab[i - 1], "##start") == 0 ||
+        my_strcmp(lemin->file_tab[i - 1], "##end") == 0)
             i++;
         if (lemin->file_tab[i][0] == '#')
             i++;
         if (many_space(lemin->file_tab[i]) == 2) {
             lemin->anthill.anthill[j] = lemin->file_tab[i];
-            //printf("content = %s\n", lemin->anthill.anthill[j]);
             j++;
         }
     }
