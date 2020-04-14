@@ -7,8 +7,7 @@
 
 #include "maths.h"
 
-int
-_atoi(const char *string)
+int _atoi(const char *string)
 {
     int sign = 1;
     int base = 0;

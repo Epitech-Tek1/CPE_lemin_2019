@@ -11,7 +11,7 @@ void printt_string(char **array, bool jump)
 {
     for (int i = 0; array[i]; i++) {
         _putstr(array[i], 1);
-        if (jump) _putchar('\n');
+        if (jump) _putchar('\n', 1);
     }
 }
 

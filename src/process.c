@@ -9,7 +9,8 @@
 
 static bool (*process_fct[])(lemin_t *) =
 {
-    init_room_distance
+    init_room_distance,
+    process_room_distance
 };
 
 bool process(lemin_t *lemin)

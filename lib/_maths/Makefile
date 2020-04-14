@@ -13,6 +13,9 @@ DONE				= /bin/echo -e "\x1b[1m\x1b[33m\#\#\x1b[34m $1\x1b[0m"
 LIB 				= lib_maths.a
 
 SRC 				= atoi.c	\
+					  dist_roth.c	\
+					  pow.c	\
+					  sqrt.c	\
 					  preg_match.c	\
 
 CFLAGS 				= -Wall -I./include

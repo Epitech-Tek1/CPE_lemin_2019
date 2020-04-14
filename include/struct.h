@@ -24,9 +24,11 @@ typedef struct anthill_s
     anth_t *anth;
     size_t nanth;
     int ac;
+    int nroom;
     char **anthill;
     char **startend_room;
     char **av;
+    vector2i *room_coordinates;
 } anthill_t;
 
 typedef struct lemin_s
