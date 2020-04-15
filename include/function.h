@@ -25,5 +25,8 @@ int get_pos_file(lemin_t *lemin);
 int get_tunnel(lemin_t *lemin);
 int get_pos(lemin_t *lemin, char *to_search);
 
+/*          output         */
+int display_output(lemin_t *lemin);
+
 
 #endif /* FUNCTION_H */

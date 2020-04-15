@@ -41,6 +41,7 @@ int main(int gc, char **gv)
     lemin_t *lemin = malloc(sizeof(lemin_t));
 
     int output = lem_in(gc, gv, lemin);
+    display_output(lemin);
     free_struct(lemin);
     return (output);
 }

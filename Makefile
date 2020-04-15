@@ -14,6 +14,7 @@ SRC	:=	$(FSRC)main.c	\
 		$(FSRC)process/init.c	\
 		$(FSRC)process/process_room_distance.c	\
 		$(FSRC)utils_0.c	\
+		$(FSRC)output.c \
 
 NAME	:=	lem_in
 
