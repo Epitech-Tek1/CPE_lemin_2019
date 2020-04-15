@@ -8,6 +8,9 @@
 #ifndef DEFINE_H_
 #define DEFINE_H_
 
+#define ERROR_EXIT 84
+#define NORMAL_EXIT 0
+
 #define ROOM_COOR lemin->anthill.room_coordinates
 #define NROOM lemin->anthill.nroom
 
