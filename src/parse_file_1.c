@@ -25,10 +25,12 @@ static int parse_file_to_tab(lemin_t *lemin)
 
     if (parse_begin(lemin) == FALSE)
         return (FALSE);
-    while (lemin->file_tab != NULL && lemin->content != NULL && lemin->content[++i] != '\0') {
+    while (lemin->file_tab != NULL && lemin->content != NULL &&
+    lemin->content[++i] != '\0') {
         if (is_alnum(lemin->content[i]))
             len++;
-        if (is_alnum(lemin->content[i]) == 1 && is_alnum(lemin->content[i + 1]) == 0) {
+        if (is_alnum(lemin->content[i]) == 1 && is_alnum(lemin->content[i + 1])
+        == 0) {
             if ((lemin->file_tab[j] = malloc((len + 1) * sizeof(char))) == 0)
                 return (FALSE);
             my_strncpy(lemin->file_tab[j], &lemin->content[i - len + 1], len);
