@@ -7,12 +7,14 @@
 
 #include "lemin.h"
 
-static void get_file(lemin_t *lemin)
+static int get_file(lemin_t *lemin)
 {
     int i;
-
+ 
     for (i = 0; read(0, lemin->content + i, 1) > 0 && i < 5000; i++);
     lemin->content[i] = '\0';
+    printf("%s\n", lemin->content);
+    return (NORMAL_EXIT);
 }
 
 static int check_content(lemin_t *lemin)

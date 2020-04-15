@@ -43,7 +43,7 @@ int main(int gc, char **gv)
     int output = lem_in(gc, gv, lemin);
     if (output == 84)
         for (int i = 0; lemin->file_tab[i]; i++)
-            _putstr(lemin->file_tab[i], 1);
+            my_printf("%s\n", lemin->file_tab[i]);
     else display_output(lemin);
     free_struct(lemin);
     return (output);
