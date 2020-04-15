@@ -35,20 +35,18 @@ int get_pos_file(lemin_t *lemin)
 {
     int j = 0;
     
-    lemin->anthill.anthill = malloc(sizeof(char * ) * 200);
+    lemin->anthill.anthill = malloc(sizeof(char * ) * my_tablen(lemin->file_tab));
     for (int i = 1 ; lemin->file_tab[i] != NULL; i++) {
         if (my_strcmp("##start", lemin->file_tab[i - 1]) == 0)
             i++;
         if (my_strcmp("##end", lemin->file_tab[i - 1]) == 0)
             i++;
         if (many_space(lemin->file_tab[i]) == 2) {
-            lemin->anthill.anthill[j] = malloc(sizeof(char) * 100);
-            lemin->anthill.anthill[j] = my_strcat_nf(lemin->tunnel.near_room[j], lemin->file_tab[i]);
-            printf("room = %s\n", lemin->file_tab[i]);
+            lemin->anthill.anthill[j] = malloc(sizeof(char) * my_strlen(lemin->file_tab[i]));
+            lemin->anthill.anthill[j] = lemin->file_tab[i];
             j++;
         }
     }
-    printf("%d\n", j);
     lemin->anthill.anthill[j] = NULL;
 }
 
