@@ -54,11 +54,12 @@ int get_tunnel(lemin_t *lemin)
 {
     int j = 0;
 
-    lemin->tunnel.near_room = malloc(sizeof(char *) * 20);
+    lemin->tunnel.near_room = malloc(sizeof(char *) * my_tablen(lemin->file_tab));
     for (int i = 1 ; lemin->file_tab[i] != NULL; i++) {
         if (lemin->file_tab[i][0] == '#')
             i++;
         if (many_space(lemin->file_tab[i]) == 0) {
+            lemin->tunnel.near_room[j] = malloc(sizeof(char) * my_strlen(lemin->file_tab[i]));
             lemin->tunnel.near_room[j] = lemin->file_tab[i];
             j++;
         }
