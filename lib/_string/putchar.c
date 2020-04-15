@@ -1,14 +1,13 @@
 /*
 ** EPITECH PROJECT, 2020
-** CPE_dante_2019 [WSL: Debian]
+** lem_in
 ** File description:
-** _putchar
+** lem_in
 */
 
 #include "string.h"
 
-void
-_putchar(const char character, const int fd)
+void_putchar(const char character, const int fd)
 {
     write(fd, &character, 1);
 }
