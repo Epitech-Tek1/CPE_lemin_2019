@@ -9,7 +9,7 @@
 
 bool process_room_distance(lemin_t *lemin)
 {
-    size_t *distance = malloc(sizeof(int) * NROOM);
+    int *distance = malloc(sizeof(int) * (NROOM + 2));
 
     if (!distance) return (false);
     for (int i = 0; i != NROOM; i++)

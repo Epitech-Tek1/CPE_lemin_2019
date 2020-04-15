@@ -25,9 +25,9 @@ bool init_room_distance(lemin_t *lemin)
 {
     int i = 0;
 
-    for (i = 0; i != lemin->anthill.anthill[i]; i++);
+    for (i = 0; lemin->anthill.anthill[i]; i++);
     NROOM = i;
-    if (!(ROOM_COOR = malloc(sizeof(vector2i *) * NROOM))) return (false);
+    if (!(ROOM_COOR = malloc(sizeof(vector2i *) * (NROOM + 2)))) return (false);
     ROOM_COOR[0].x = _nindex(lemin->anthill.startend_room[0], ' ', 1);
     ROOM_COOR[0].y = _nindex(lemin->anthill.startend_room[0], ' ', 2);
     for (int i = 1, n = 0; i != NROOM; i++, n++) {

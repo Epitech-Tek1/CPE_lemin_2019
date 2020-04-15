@@ -7,7 +7,7 @@
 
 #include "string.h"
 
-void_putchar(const char character, const int fd)
+void _putchar(const char character, const int fd)
 {
     write(fd, &character, 1);
 }

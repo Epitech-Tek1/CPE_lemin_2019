@@ -17,6 +17,7 @@ typedef struct anth_s
 typedef struct tunnel_s
 {
     char **near_room;
+    char **string;
 } tunnel_t;
 
 typedef struct anthill_s

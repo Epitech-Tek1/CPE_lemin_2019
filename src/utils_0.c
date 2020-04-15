@@ -34,15 +34,17 @@ int many_space(char *str)
 int get_pos_file(lemin_t *lemin)
 {
     int j = 0;
-    
-    lemin->anthill.anthill = malloc(sizeof(char * ) * my_tablen(lemin->file_tab));
+
+    lemin->anthill.anthill = malloc(sizeof(char * ) *
+    my_tablen(lemin->file_tab));
     for (int i = 1 ; lemin->file_tab[i] != NULL; i++) {
         if (my_strcmp("##start", lemin->file_tab[i - 1]) == 0)
             i++;
         if (my_strcmp("##end", lemin->file_tab[i - 1]) == 0)
             i++;
         if (many_space(lemin->file_tab[i]) == 2) {
-            lemin->anthill.anthill[j] = malloc(sizeof(char) * my_strlen(lemin->file_tab[i]));
+            lemin->anthill.anthill[j] = malloc(sizeof(char) *
+            my_strlen(lemin->file_tab[i]));
             lemin->anthill.anthill[j] = lemin->file_tab[i];
             j++;
         }
@@ -54,12 +56,14 @@ int get_tunnel(lemin_t *lemin)
 {
     int j = 0;
 
-    lemin->tunnel.near_room = malloc(sizeof(char *) * my_tablen(lemin->file_tab));
+    lemin->tunnel.near_room = malloc(sizeof(char *) *
+    my_tablen(lemin->file_tab));
     for (int i = 1 ; lemin->file_tab[i] != NULL; i++) {
         if (lemin->file_tab[i][0] == '#')
             i++;
         if (many_space(lemin->file_tab[i]) == 0) {
-            lemin->tunnel.near_room[j] = malloc(sizeof(char) * my_strlen(lemin->file_tab[i]));
+            lemin->tunnel.near_room[j] = malloc(sizeof(char) *
+            my_strlen(lemin->file_tab[i]));
             lemin->tunnel.near_room[j] = lemin->file_tab[i];
             j++;
         }

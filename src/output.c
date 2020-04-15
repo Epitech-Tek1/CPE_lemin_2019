@@ -24,7 +24,7 @@ int display_tunnels(lemin_t *lemin)
 int display_output(lemin_t *lemin)
 {
     my_printf("#number_of_ants\n");
-    my_printf("%ld\n", lemin->anthill.nanth);
+    my_printf("%d\n", lemin->anthill.nanth);
     my_printf("#rooms\n");
     my_printf("##start\n");
     my_printf("%s\n", lemin->anthill.startend_room[0]);

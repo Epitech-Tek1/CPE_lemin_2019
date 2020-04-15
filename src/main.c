@@ -41,7 +41,10 @@ int main(int gc, char **gv)
     lemin_t *lemin = malloc(sizeof(lemin_t));
 
     int output = lem_in(gc, gv, lemin);
-    display_output(lemin);
+    if (output == 84)
+        for (int i = 0; lemin->file_tab[i]; i++)
+            _putstr(lemin->file_tab[i], 1);
+    else display_output(lemin);
     free_struct(lemin);
     return (output);
 }
