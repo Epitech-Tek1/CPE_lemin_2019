@@ -50,6 +50,7 @@ int get_pos_file(lemin_t *lemin)
         }
     }
     lemin->anthill.anthill[j] = NULL;
+    return (0);
 }
 
 int get_tunnel(lemin_t *lemin)
@@ -69,6 +70,7 @@ int get_tunnel(lemin_t *lemin)
         }
     }
     lemin->tunnel.near_room[j] = NULL;
+    return (0);
 }
 
 int get_pos(lemin_t *lemin, char *to_search)

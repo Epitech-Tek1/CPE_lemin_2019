@@ -8,12 +8,12 @@
 FSRC	:=	src/
 
 SRC	:=	$(FSRC)main.c	\
-		$(FSRC)parse_file_0.c	\
-		$(FSRC)parse_file_1.c	\
+		$(FSRC)parse_file_f.c	\
+		$(FSRC)parse_file_s.c	\
 		$(FSRC)process.c	\
 		$(FSRC)process/init.c	\
 		$(FSRC)process/process_room_distance.c	\
-		$(FSRC)utils_0.c	\
+		$(FSRC)utils.c	\
 		$(FSRC)output.c \
 
 NAME	:=	lem_in
