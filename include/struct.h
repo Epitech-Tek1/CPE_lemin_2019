@@ -30,6 +30,7 @@ typedef struct anthill_s
     char **startend_room;
     char **av;
     char **room_name;
+    char **output;
     vector2i *room_coordinates;
 } anthill_t;
 

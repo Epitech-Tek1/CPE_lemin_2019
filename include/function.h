@@ -16,6 +16,7 @@ int check_buffer(lemin_t *lemin);
 bool process(lemin_t *lemin);
 bool init_room_distance(lemin_t *lemin);
 bool process_room_distance(lemin_t *lemin);
+bool move(lemin_t *lemin);
 
 
 /*          utils           */
