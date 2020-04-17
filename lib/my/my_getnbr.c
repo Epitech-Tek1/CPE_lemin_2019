@@ -1,5 +1,4 @@
 /*
-**
 ** EPITECH PROJECT, 2019
 ** Library Function
 ** File description:

@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2020
 ** my_strcat
 ** File description:
-** strcat
+** my_strcat
 */
 
 #include "my.h"

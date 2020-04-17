@@ -10,7 +10,8 @@
 
 static int parse_begin(lemin_t *lemin)
 {
-    lemin->file_tab = malloc((word_count_int_tab(lemin->content) + 1) * sizeof(char *));
+    lemin->file_tab = malloc((word_count_int_tab(lemin->content) + 1)
+        * sizeof(char *));
     if (lemin->file_tab == NULL) {
         return (FALSE);
     }
@@ -23,12 +24,10 @@ static int parse_file_to_tab(lemin_t *lemin)
     int i = -1;
     int len = 0;
 
-    if (parse_begin(lemin) == FALSE)
-        return (FALSE);
+    if (parse_begin(lemin) == FALSE) return (FALSE);
     while (lemin->file_tab != NULL && lemin->content != NULL &&
     lemin->content[++i] != '\0') {
-        if (is_alnum(lemin->content[i]))
-            len++;
+        if (is_alnum(lemin->content[i])) len++;
         if (is_alnum(lemin->content[i]) == 1 && is_alnum(lemin->content[i + 1])
         == 0) {
             if ((lemin->file_tab[j] = malloc((len + 1) * sizeof(char))) == 0)

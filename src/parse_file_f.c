@@ -10,7 +10,7 @@
 static int get_file(lemin_t *lemin)
 {
     int i;
- 
+
     for (i = 0; read(0, lemin->content + i, 1) > 0 && i < 5000; i++);
     lemin->content[i] = '\0';
     return (NORMAL_EXIT);
