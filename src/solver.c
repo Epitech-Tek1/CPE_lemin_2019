@@ -12,7 +12,8 @@ char *prev_room(lemin_t *lemin, int i)
     char *proom = _memalloc(my_strlen(lemin->tunnel.near_room[i]));
     int o = 0;
 
-    for (int j = 0; lemin->tunnel.near_room[i][j] != '-'; j++) {
+    for (int j = 0; lemin->tunnel.near_room[i][j] &&
+    lemin->tunnel.near_room[i][j] != '-'; j++) {
         proom[o] = lemin->tunnel.near_room[i][j];
         o++;
     }
@@ -45,6 +46,7 @@ char **check_next_start_room(lemin_t *lemin)
             return (lemin->tunnel.path);
         }
     }
+    return (lemin->tunnel.path);
 }
 
 int path_finding(lemin_t *lemin)
@@ -55,7 +57,7 @@ int path_finding(lemin_t *lemin)
     for (int i = 0; ROOM_NAME[i]; i++) {
         if (_strlen(ROOM_NAME[i]) > n) n = i;
     }
-    lemin->tunnel.path = malloc(sizeof(char *) * (lemin->anthill.nroom + 2));
+    lemin->tunnel.path = malloc(sizeof(char *) * (lemin->anthill.nroom + 3));
     for (int i = 0; lemin->anthill.nroom + 2 != i; i++)
         lemin->tunnel.path[i] = _memalloc(_strlen(ROOM_NAME[n]));
     lemin->tunnel.path = check_next_start_room(lemin);
@@ -63,9 +65,9 @@ int path_finding(lemin_t *lemin)
         for (int i = 0; lemin->tunnel.near_room[i] != NULL; i++) {
             if (_strcmp(lemin->tunnel.path[p - 1], prev_room(lemin, i))) {
                 lemin->tunnel.path[p] = next_room(lemin, i);
-                return (lemin->tunnel.path);
             }
         }
     }
     lemin->tunnel.path[p] = NULL;
+    return (true);
 }

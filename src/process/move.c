@@ -35,7 +35,8 @@ static int npath(lemin_t *lemin, char **path)
 {
     int i = 0;
 
-    for (i = 0; i != NROOM; i++); return (i);
+    for (i = 0; i != NROOM; i++);
+    return (i);
 }
 
 bool move(lemin_t *lemin)
@@ -56,4 +57,5 @@ bool move(lemin_t *lemin)
     }
     move[i - 1] = rm_rf(move[i - 1]);
     my_printf("%s\n", move[i - 1]);
+    return (true);
 }

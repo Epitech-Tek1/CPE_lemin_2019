@@ -45,8 +45,9 @@ static int check_file_error(lemin_t *lemin)
 {
     int start = 0;
     int end = 0;
-    if (is_alnum(lemin->file_tab[0]) == 0)
-        return (FALSE);
+
+    for (int i = 0; lemin->file_tab[0][i] != '\0'; i++)
+        if (is_alnum(lemin->file_tab[0][i]) == 0) return (FALSE);
     for (int i = 0; lemin->file_tab[i] != NULL; ++i) {
         if (my_strcmp(lemin->file_tab[i], "##start") == 0)
             start++;
