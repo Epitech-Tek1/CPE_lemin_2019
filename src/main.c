@@ -44,7 +44,10 @@ int main(int gc, char **gv)
     if (output == 84)
         for (int i = 0; lemin->file_tab[i]; i++)
             my_printf("%s\n", lemin->file_tab[i]);
-    else display_output(lemin);
+    else {
+        display_output(lemin);
+        path_finding(lemin);
+    }
     free_struct(lemin);
     return (output);
 }

@@ -18,6 +18,7 @@ typedef struct tunnel_s
 {
     char **near_room;
     char **string;
+    char **path;
 } tunnel_t;
 
 typedef struct anthill_s
