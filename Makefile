@@ -13,9 +13,10 @@ SRC	:=	$(FSRC)main.c	\
 		$(FSRC)process.c	\
 		$(FSRC)process/init.c	\
 		$(FSRC)process/process_room_distance.c	\
+		$(FSRC)process/move.c	\
 		$(FSRC)utils.c	\
 		$(FSRC)output.c \
-		$(FSRC)solver.c
+		$(FSRC)solver.c	\
 
 NAME	:=	lem_in
 

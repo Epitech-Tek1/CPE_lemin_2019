@@ -30,11 +30,18 @@ char *my_strcat_nf(char *str1, char *str2)
 
 char *my_strcat(char *str1, char *str2)
 {
-    char *ret = my_strcat_nf(str1, str2);
+    int i = 0;
+    int i2 = 0;
 
-    freeif(str1);
-    freeif(str2);
-    return (ret);
+    if (str1 == NULL) return (NULL);
+    while (str1[i]) i++;
+    while (str2[i2]) {
+        str1[i] = str2[i2];
+        i++;
+        i2++;
+    }
+    str1[i] = '\0';
+    return (str1);
 }
 
 char *my_strncat_nf(char *str1, char *cpy, int size)

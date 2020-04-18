@@ -47,6 +47,7 @@ int main(int gc, char **gv)
     else {
         display_output(lemin);
         path_finding(lemin);
+        move(lemin);
     }
     free_struct(lemin);
     return (output);

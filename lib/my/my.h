@@ -17,6 +17,8 @@
 #include <dirent.h>
 #include <string.h>
 
+#include "../_string/include/string.h"
+
 // Library functions
 void my_putchar(char c);
 int my_isneg(int nb);

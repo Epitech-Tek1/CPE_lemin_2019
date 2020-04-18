@@ -1,25 +1,12 @@
-34
+7
+#rooms
 ##start
-melon 23 3
-2 16 7
-#comment
-pasteque 16 3
-4 16 5
-5 9 3
-6 1 0
-7 4 8
+0 1 2
 ##end
-0 9 5
-melon-4
-melon-6
-1-pasteque
-4-pasteque
-5-2
-pasteque-5
-#another comment
-4-2
-2-0
-7-6
-7-2
-7-4
-6-5
+1 9 2
+2 5 0
+3 5 4
+#tunnels
+0-2
+2-3
+3-1
