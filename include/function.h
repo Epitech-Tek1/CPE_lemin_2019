@@ -29,5 +29,7 @@ int get_pos(lemin_t *lemin, char *to_search);
 /*          output         */
 int display_output(lemin_t *lemin);
 
+/*          pathfinding         */
+int path_finding(lemin_t *lemin);
 
 #endif /* FUNCTION_H */

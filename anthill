@@ -1,24 +1,24 @@
 34
 ##start
-1 23 3
+melon 23 3
 2 16 7
 #comment
-3 16 3
+pasteque 16 3
 4 16 5
 5 9 3
 6 1 0
 7 4 8
 ##end
 0 9 5
-0-4
-0-6
-1-3
-4-3
+melon-4
+melon-6
+1-pasteque
+4-pasteque
 5-2
-3-5
+pasteque-5
 #another comment
 4-2
-2-1
+2-0
 7-6
 7-2
 7-4
